@@ -30,7 +30,7 @@ class CharactersDetailsScreen extends StatelessWidget {
   Widget buildDivaider(double endIndent) {
     return Divider(
       color: Colors.yellow,
-      endIndent:endIndent ,
+      endIndent: endIndent,
       height: 40,
       thickness: 3,
     );
@@ -73,13 +73,16 @@ class CharactersDetailsScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      characterInfo('job :',character.jobs.join(' / ')),
+                      characterInfo('job :', character.jobs.join(' / ')),
                       buildDivaider(315),
-                      characterInfo('Appeared in :',character.category),
+                      characterInfo('Appeared in :', character.category),
                       buildDivaider(250),
-                      characterInfo('Sesesion:',character.appearance.join(' / ')),
+                      characterInfo(
+                          'Sesesion:', character.appearance.join(' / ')),
                       buildDivaider(250),
-                      characterInfo('Status:',character.status),
+                      characterInfo('Status:', character.status),
+                      buildDivaider(250),
+                      characterInfo('Actor namw:', character.actorName),
                       buildDivaider(250),
                     ],
                   ),
